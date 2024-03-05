@@ -1,0 +1,175 @@
+@font-face {
+    font-family: boldFont;
+    src: url('./gotham/Gotham-Black.otf');
+}
+@font-face {
+    font-family: lightFont;
+    src: url('./gotham/GothamBook.ttf');
+}
+@font-face {
+    font-family: ThinFont;
+    src: url('./gotham/Gotham-Light.otf');
+}
+body{
+    margin: 0;
+    padding: 0;
+
+    
+    font-family: lightFont;
+}
+.container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+ 
+    flex-direction: column;
+ 
+    padding: 40px
+}
+h2{
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: boldFont;
+}
+
+.box-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  
+}
+.selector{
+    color: rgb(88, 88, 243);
+}
+.upper{
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+ .card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 20px;
+    width: 370px;
+    height: 220px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+      position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: width 0.3s, height 0.3s;
+}
+.overlay-container{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+ .color{
+    /* color: rgba(77, 37, 223, 0.62); */
+
+    color: #dcfa54;
+}
+
+.overlay .card-heading{
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.overlay p {
+    color: #fff;
+    font-size: 14px;
+    font-family: ThinFont;
+
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.card:hover .overlay {
+/*             opacity: 1; */
+  width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+
+    align-items: flex-end;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding-bottom:12px;
+}
+
+.card:hover .card-text {
+    opacity: 0;
+}
+
+@media screen and (max-width:768px) {
+    .upper{
+        flex-direction: column;
+    }
+    .card{
+        width: 80%;
+        height: 20rem;
+    }
+}
+@media screen and (max-width:480px) {
+    .upper{
+        flex-direction: column;
+    }
+    .card{
+        width: 100%;
+        height: 10rem;
+    }
+    .card-text{
+        font-size: 18px;
+    }
+    .overlay .card-heading{
+        font-size: 1.1rem;
+    }
+    .overlay p{
+        font-size: 10px;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+}
