@@ -26,11 +26,11 @@ body{
  
     padding: 40px
 }
-h2{
+/* h2{
     font-size: 2rem;
     font-weight: bold;
     font-family: boldFont;
-}
+} */
 
 .box-wrapper{
     display: flex;
@@ -41,7 +41,7 @@ h2{
 .selector{
     color: #114A8D;
 }
-.container h2{
+.container .why{
     font-weight: 600;
     font-size: 48px;
 }
@@ -167,6 +167,10 @@ h2{
     }
 }
 @media screen and (max-width:480px) {
+    .container .why{
+        font-weight: 600;
+        font-size: 38px;
+    }
     .upper{
         flex-direction: column;
     }
